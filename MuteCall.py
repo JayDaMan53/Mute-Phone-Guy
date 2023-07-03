@@ -8,6 +8,8 @@ import os
 import sys
 import shutil
 
+from colorama import init, Fore, Back, Style
+init()
 # Get the directory of the .exe file (or .py file if running the script directly)
 exe_dir = os.path.dirname(sys.executable)
 
@@ -65,6 +67,11 @@ def find_and_click():
 
 # Set up a hotkey that calls find_and_click() when 'ctrl + shift + a' is pressed
 keyboard.add_hotkey(Key, find_and_click)
+
+print("===================")
+print(Fore.LIGHTGREEN_EX + "MADE BY: jaydaman53")
+print("POGGIES")
+print(Fore.RESET + "===================")
 
 # Block the program, keeping it running in a loop to monitor for the hotkey press
 keyboard.wait()
